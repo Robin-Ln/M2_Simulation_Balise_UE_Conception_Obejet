@@ -62,6 +62,10 @@ public class BaliseWorld extends World {
         BaliseVue baliseVue = new BaliseVue(balise);
         SatteliteVue satteliteVue = new SatteliteVue(sattelite);
 
+        this.contents().add(baliseVue);
+        this.contents().add(satteliteVue);
+
+
         baliseVue.setWorld(this);
         satteliteVue.setWorld(this);
 

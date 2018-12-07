@@ -7,13 +7,13 @@ import java.util.Map;
 
 public class Observable {
 
-    private Map<Class<?>, List<Observeur>> observeursMap;
+    private Map<Class<? extends Evenement>, List<Observeur>> observeursMap;
 
     public Observable() {
         this.observeursMap = new HashMap<>();
     }
 
-    public void record(Class<?> uneClass, Observeur o) {
+    public void record(Class<? extends Evenement> uneClass, Observeur o) {
         List<Observeur> observeursList = this.observeursMap.get(uneClass);
 
 
