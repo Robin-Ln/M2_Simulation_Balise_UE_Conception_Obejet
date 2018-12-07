@@ -1,5 +1,7 @@
 package modele;
 
+import modele.deplacement.Deplacement;
+import modele.deplacement.VersLaDroite;
 import observeur.EntiteChange;
 import observeur.Evenement;
 import observeur.Observeur;
@@ -9,12 +11,12 @@ import visiteur.VisitorEntite;
 
 public class Balise extends Entite implements Observeur {
 
-    /*public void seDeplacer(){
-        Position position = this.getDeplacement().nextPosition(this);
+    public Balise(Integer x, Integer y, Integer vitesse) {
+        Position position = new Position(x, y);
+        Deplacement deplacement = new VersLaDroite(vitesse);
         this.setPosition(position);
-        this.signal(new SatteliteChange(this));
-        this.signal(new EntiteChange(this));
-    }*/
+        this.setDeplacement(deplacement);
+    }
 
     public void seDeplacer(){
         Position position = this.getDeplacement().nextPosition(this.getPosition());

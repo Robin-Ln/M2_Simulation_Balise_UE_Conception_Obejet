@@ -41,18 +41,11 @@ public class BaliseWorld extends World {
         // --------------
 
         // Balise
-        Balise balise = new Balise();
-        Position position = new Position(BaliseWorld.width + 200, BaliseWorld.height);
-        Deplacement deplacement = new VersLaDroite(10);
-        balise.setPosition(position);
-        balise.setDeplacement(deplacement);
+        Balise balise = new Balise(BaliseWorld.width + 200, BaliseWorld.height, 10);
 
         // Satelite
-        Sattelite sattelite = new Sattelite();
-        Position position2 = new Position(BaliseWorld.width - 200, BaliseWorld.height-100);
-        Deplacement deplacement2 = new VersLaDroite(5);
-        sattelite.setPosition(position2);
-        sattelite.setDeplacement(deplacement2);
+        Sattelite sattelite = new Sattelite(BaliseWorld.width - 200, BaliseWorld.height-100, 5);
+
 
 
         // abonement de la balise pour le satelite
@@ -62,6 +55,8 @@ public class BaliseWorld extends World {
         BaliseVue baliseVue = new BaliseVue(balise);
         SatteliteVue satteliteVue = new SatteliteVue(sattelite);
 
+
+        // Ajout pour le repaint
         this.contents().add(baliseVue);
         this.contents().add(satteliteVue);
 
