@@ -8,15 +8,17 @@ import java.util.Map;
 
 public class Observable {
 
-    private Map<Class<? extends Evenement>, Map<Method, List<Observeur>>> evenementMap;
+    // private Map<Class<? extends Evenement>, Map<Method, List<Observeur>>> evenementMap;
 
+    private Map<Class<? extends Evenement>, List<Observeur>> observeursMap;
 
     public Observable() {
-        this.evenementMap = new HashMap<>();
+        // this.evenementMap = new HashMap<>();
+        this.observeursMap = new HashMap<>();
     }
 
 
-
+    /*
     public void performRecord(Class<? extends Evenement> evtClass, Observeur o, Method method) {
         Map<Method, List<Observeur>> methodMap = this.evenementMap.get(evtClass);
 
@@ -41,9 +43,9 @@ public class Observable {
         observeurList.add(o);
 
 
-    }
+    }*/
 
-    /*
+
     public void record(Class<? extends Evenement> uneClass, Observeur o) {
         List<Observeur> observeursList = this.observeursMap.get(uneClass);
 
@@ -56,8 +58,8 @@ public class Observable {
 
         observeursList.add(o);
     }
-    */
 
+    /*
     public void signalPerform(Evenement evt, Method method, List<Object> objects) {
         Map<Method, List<Observeur>> methodMap = this.evenementMap.get(evt.getClass());
 
@@ -73,9 +75,9 @@ public class Observable {
                 }
             }
         }
-    }
+    }*/
 
-    /*
+
     public void signal(Evenement evt) {
         List<Observeur> observeursList = this.observeursMap.get(evt.getClass());
 
@@ -86,5 +88,5 @@ public class Observable {
             }
         }
     }
-    */
+
 }
