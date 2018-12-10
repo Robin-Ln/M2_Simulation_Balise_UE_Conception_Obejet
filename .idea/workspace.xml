@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd0e5591-3e1e-4aae-bc26-28045127db24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modele/deplacement/VersLeBas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modele/deplacement/VersLeHaut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/Balise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Balise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/Sattelite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Sattelite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplacement/Deplacement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplacement/Deplacement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/deplacement/VersLaDroite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/deplacement/VersLaDroite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/observeur/evenement/SatteliteChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observeur/evenement/SatteliteChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/BaliseWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/BaliseWorld.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/modele/Balise.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -136,7 +125,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544475148469" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544475198274" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -201,7 +190,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21488000" />
+    <option name="totallyTimeSpent" value="21628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -216,7 +205,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2890411" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2890411" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3958904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -224,7 +213,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32739726" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32739726" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -596,11 +585,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modele/Balise.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>

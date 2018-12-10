@@ -1,7 +1,6 @@
 package modele;
 
 import modele.deplacement.Deplacement;
-import modele.deplacement.VersLaDroite;
 import modele.deplacement.VersLeBas;
 import modele.deplacement.VersLeHaut;
 import observeur.Observeur;
