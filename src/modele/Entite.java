@@ -1,16 +1,11 @@
 package modele;
 
 import modele.deplacement.Deplacement;
-import observeur.*;
-import visiteur.Visitable;
+import observeur.EntiteChange;
+import observeur.Observable;
+import observeur.SatteliteChange;
 
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-public abstract class Entite extends Observable implements Visitable {
+public abstract class Entite extends Observable {
 
     // Attributs
 
@@ -27,7 +22,7 @@ public abstract class Entite extends Observable implements Visitable {
 
     // Methodes
 
-    public void seDeplacer(){
+    public void seDeplacer() {
         Position position = this.getDeplacement().nextPosition(this.getPosition());
         this.setPosition(position);
         this.signal(new SatteliteChange(this));

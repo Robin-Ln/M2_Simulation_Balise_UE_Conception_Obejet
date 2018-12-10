@@ -1,7 +1,5 @@
 package modele;
 
-import modele.deplacement.Deplacement;
-import modele.deplacement.VersLaDroite;
 import vue.BaliseWorld;
 
 import java.util.ArrayList;

@@ -2,16 +2,8 @@ package modele;
 
 import modele.deplacement.Deplacement;
 import modele.deplacement.VersLaDroite;
-import observeur.EntiteChange;
-import observeur.Evenement;
 import observeur.Observeur;
-import observeur.SatteliteChange;
 import vue.BaliseWorld;
-import visiteur.VisitorEntite;
-
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Balise extends Entite implements Observeur {
 
@@ -39,8 +31,5 @@ public class Balise extends Entite implements Observeur {
         }
     }
 
-    @Override
-    public void accept(VisitorEntite visitorEntite) {
-        visitorEntite.visite(this);
-    }
+
 }

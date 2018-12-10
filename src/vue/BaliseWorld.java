@@ -1,14 +1,13 @@
 package vue;
 
 import graphicLayer.World;
-import modele.*;
-import modele.deplacement.Deplacement;
-import modele.deplacement.VersLaDroite;
+import modele.Balise;
+import modele.Entite;
+import modele.Modele;
+import modele.Sattelite;
 import observeur.SatteliteChange;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class BaliseWorld extends World {
 
