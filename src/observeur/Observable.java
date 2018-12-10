@@ -11,10 +11,6 @@ import java.util.Map;
 
 public class Observable {
 
-    // V1
-    //private Map<Class<? extends Evenement>, List<Observeur>> observeursMap;
-
-    // V2
     private Map<Class<? extends Evenement>, List<Enregistrement>> evenemens;
 
     public Observable() {
@@ -37,22 +33,6 @@ public class Observable {
         enregistrements.add(new Enregistrement(o, method));
     }
 
-    /*
-
-    // V1
-    public void record(Class<? extends Evenement> uneClass, Observeur o) {
-        List<Observeur> observeursList = this.observeursMap.get(uneClass);
-
-        if (observeursList == null) {
-            observeursList = new ArrayList<>();
-            observeursList.add(o);
-            this.observeursMap.put(uneClass, observeursList);
-            return;
-        }
-
-        observeursList.add(o);
-    }
-    */
 
     // V2
     public void signal(Evenement evt, List<Object> objects) {
@@ -70,17 +50,5 @@ public class Observable {
         }
     }
 
-    /*
-    // V1
-    public void signal(Evenement evt) {
-        List<Observeur> observeursList = this.observeursMap.get(evt.getClass());
 
-
-        if (observeursList != null) {
-            for (Observeur observeur : observeursList) {
-                observeur.receive(evt);
-            }
-        }
-    }
-    */
 }
