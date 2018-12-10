@@ -1,7 +1,9 @@
-package observeur;
+package observeur.evenement;
 
 import modele.Balise;
 import modele.Sattelite;
+import observeur.Observable;
+import observeur.Observeur;
 
 public class SatteliteChange extends Evenement {
 

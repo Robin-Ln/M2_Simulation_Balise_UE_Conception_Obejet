@@ -1,13 +1,9 @@
 package vue;
 
 import graphicLayer.Morph;
-import modele.Balise;
 import modele.Entite;
-import modele.Sattelite;
-import observeur.EntiteChange;
-import observeur.Evenement;
+import observeur.evenement.EntiteChange;
 import observeur.Observeur;
-import observeur.SatteliteChange;
 
 import java.awt.*;
 

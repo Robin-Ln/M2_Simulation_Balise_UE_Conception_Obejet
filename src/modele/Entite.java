@@ -1,9 +1,9 @@
 package modele;
 
 import modele.deplacement.Deplacement;
-import observeur.EntiteChange;
+import observeur.evenement.EntiteChange;
 import observeur.Observable;
-import observeur.SatteliteChange;
+import observeur.evenement.SatteliteChange;
 
 public abstract class Entite extends Observable {
 

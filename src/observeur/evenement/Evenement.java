@@ -1,4 +1,7 @@
-package observeur;
+package observeur.evenement;
+
+import observeur.Observable;
+import observeur.Observeur;
 
 public abstract class Evenement {
 

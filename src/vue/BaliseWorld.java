@@ -5,7 +5,7 @@ import modele.Balise;
 import modele.Entite;
 import modele.Modele;
 import modele.Sattelite;
-import observeur.SatteliteChange;
+import observeur.evenement.SatteliteChange;
 
 import java.awt.*;
 

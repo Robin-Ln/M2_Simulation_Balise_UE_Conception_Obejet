@@ -1,6 +1,8 @@
-package observeur;
+package observeur.evenement;
 
 import modele.Entite;
+import observeur.Observable;
+import observeur.Observeur;
 import vue.EntiteVue;
 
 import java.awt.*;
