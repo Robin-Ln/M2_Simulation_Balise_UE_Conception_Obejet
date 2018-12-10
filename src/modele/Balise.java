@@ -22,14 +22,6 @@ public class Balise extends Entite implements Observeur {
         this.setDeplacement(deplacement);
     }
 
-    public void seDeplacer(){
-        Position position = this.getDeplacement().nextPosition(this.getPosition());
-        this.setPosition(position);
-        List<Object> objects = new ArrayList<>();
-        objects.add(new Point(this.getPosition().getX(), this.getPosition().getY()));
-        this.signal(new EntiteChange(this), objects);
-    }
-
     public void sendData(Sattelite sattelite){
         sattelite.receiveData(this);
     }

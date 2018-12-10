@@ -4,6 +4,7 @@ import modele.deplacement.Deplacement;
 import observeur.*;
 import visiteur.Visitable;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,7 +27,14 @@ public abstract class Entite extends Observable implements Visitable {
 
     // Methodes
 
-    public abstract void seDeplacer();
+    public void seDeplacer(){
+        Position position = this.getDeplacement().nextPosition(this.getPosition());
+        this.setPosition(position);
+        List<Object> objects = new ArrayList<>();
+        objects.add(new Point(this.getPosition().getX(), this.getPosition().getY()));
+        this.signal(new SatteliteChange(this));
+        this.signal(new EntiteChange(this));
+    }
 
     // Accesseurs
 

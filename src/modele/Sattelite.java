@@ -20,15 +20,6 @@ public class Sattelite extends Entite {
         this.setDeplacement(deplacement2);
     }
 
-    public void seDeplacer(){
-        Position position = this.getDeplacement().nextPosition(this.getPosition());
-        this.setPosition(position);
-        List<Object> objects = new ArrayList<>();
-        objects.add(new Point(this.getPosition().getX(), this.getPosition().getY()));
-        this.signal(new SatteliteChange(this), objects);
-        this.signal(new EntiteChange(this), objects);
-    }
-
     @Override
     public void accept(VisitorEntite visitorEntite) {
         visitorEntite.visite(this);

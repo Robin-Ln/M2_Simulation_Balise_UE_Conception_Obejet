@@ -20,11 +20,9 @@ public class EntiteVue extends Morph implements Observeur {
                 new Dimension(20, 20)
         );
 
-        try {
-            entite.record(EntiteChange.class, this, EntiteVue.class.getMethod("setPosition", Point.class));
-        } catch (Exception e) {
-            System.out.println("exeption getMethod");
-        }
+
+        entite.record(EntiteChange.class, this);
+
     }
 
     @Override

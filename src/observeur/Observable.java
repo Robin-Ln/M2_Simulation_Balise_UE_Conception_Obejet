@@ -11,33 +11,16 @@ import java.util.Map;
 
 public class Observable {
 
-    // V1
-    //private Map<Class<? extends Evenement>, List<Observeur>> observeursMap;
 
-    // V2
-    private Map<Class<? extends Evenement>, List<Enregistrement>> evenemens;
+    private Map<Class<? extends Evenement>, List<Observeur>> observeursMap;
 
     public Observable() {
-        this.evenemens = new HashMap<>();
+
+        this.observeursMap = new HashMap<>();
     }
 
 
-    // V2
-    public void record(Class<? extends Evenement> evtClass, Observeur o, Method method) {
-        List<Enregistrement> enregistrements = this.evenemens.get(evtClass);
 
-        if (enregistrements == null) {
-            enregistrements = new ArrayList<>();
-
-            enregistrements.add(new Enregistrement(o, method));
-            this.evenemens.put(evtClass, enregistrements);
-            return;
-        }
-
-        enregistrements.add(new Enregistrement(o, method));
-    }
-
-    /*
 
     // V1
     public void record(Class<? extends Evenement> uneClass, Observeur o) {
@@ -52,28 +35,11 @@ public class Observable {
 
         observeursList.add(o);
     }
-    */
 
-    // V2
-    public void signal(Evenement evt, List<Object> objects) {
 
-        List<Enregistrement> enregistrements = this.evenemens.get(evt.getClass());
 
-        if (enregistrements != null) {
-            for (Enregistrement enregistrement : enregistrements) {
-                try {
-                    System.out.println("getObserveur : "+enregistrement.getObserveur());
-                    System.out.println("getMethod "+enregistrement.getMethod());
 
-                    enregistrement.getMethod().invoke(enregistrement.getObserveur(), new Point(10,10));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
 
-    /*
     // V1
     public void signal(Evenement evt) {
         List<Observeur> observeursList = this.observeursMap.get(evt.getClass());
@@ -85,5 +51,4 @@ public class Observable {
             }
         }
     }
-    */
 }
