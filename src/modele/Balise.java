@@ -8,9 +8,9 @@ import vue.BaliseWorld;
 
 public class Balise extends Entite implements Observeur {
 
-    public Balise(Integer x, Integer y, Integer vitesse) {
+    public Balise(Integer x, Integer y) {
         Position position = new Position(x, y);
-        Deplacement deplacement = new VersLeHaut(vitesse, this);
+        Deplacement deplacement = new VersLeHaut(BaliseWorld.vitesseBalise, this);
         this.setPosition(position);
         this.setDeplacement(deplacement);
     }
@@ -28,7 +28,7 @@ public class Balise extends Entite implements Observeur {
             // Sattelite positionné au dessus de la balise
             if (baliseX > satteliteX - 5 && baliseX < satteliteX + 5) {
                 sattelite.receiveData(this);
-                this.setDeplacement(new VersLeBas(10, this));
+                this.setDeplacement(new VersLeBas(BaliseWorld.vitesseBalise, this));
             }
         }
     }

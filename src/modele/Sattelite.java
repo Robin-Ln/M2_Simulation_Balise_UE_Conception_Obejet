@@ -2,12 +2,13 @@ package modele;
 
 import modele.deplacement.Deplacement;
 import modele.deplacement.VersLaDroite;
+import vue.BaliseWorld;
 
 public class Sattelite extends Entite {
 
-    public Sattelite(Integer x, Integer y, Integer vitesse) {
+    public Sattelite(Integer x, Integer y) {
         Position position2 = new Position(x, y);
-        Deplacement deplacement2 = new VersLaDroite(vitesse, this);
+        Deplacement deplacement2 = new VersLaDroite(BaliseWorld.vitesseSattelite, this);
         this.setPosition(position2);
         this.setDeplacement(deplacement2);
     }
