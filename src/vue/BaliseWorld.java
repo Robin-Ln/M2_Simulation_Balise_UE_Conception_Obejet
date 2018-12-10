@@ -42,10 +42,10 @@ public class BaliseWorld extends World {
         // --------------
 
         // Balise
-        Balise balise = new Balise(BaliseWorld.width + 200, BaliseWorld.height, 10);
+        Balise balise = new Balise(BaliseWorld.width + 195, BaliseWorld.height , 10);
 
         // Satelite
-        Sattelite sattelite = new Sattelite(BaliseWorld.width - 200, BaliseWorld.height - 100, 5);
+        Sattelite sattelite = new Sattelite(BaliseWorld.width + 200, BaliseWorld.height - 100, 5);
 
         // abonement de la balise pour le satelite
 

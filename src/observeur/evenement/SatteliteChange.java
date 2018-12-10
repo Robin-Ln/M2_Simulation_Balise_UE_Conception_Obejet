@@ -2,6 +2,7 @@ package observeur.evenement;
 
 import modele.Balise;
 import modele.Sattelite;
+import modele.deplacement.VersLeBas;
 import observeur.Observable;
 import observeur.Observeur;
 

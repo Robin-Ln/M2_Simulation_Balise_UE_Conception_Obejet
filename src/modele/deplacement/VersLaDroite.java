@@ -1,12 +1,13 @@
 package modele.deplacement;
 
+import modele.Entite;
 import modele.Position;
 import vue.BaliseWorld;
 
 public class VersLaDroite extends Deplacement {
 
-    public VersLaDroite(Integer vitesse) {
-        super(vitesse);
+    public VersLaDroite(Integer vitesse, Entite entite) {
+        super(vitesse, entite);
     }
 
     @Override

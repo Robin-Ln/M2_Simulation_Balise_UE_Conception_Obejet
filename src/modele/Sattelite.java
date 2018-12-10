@@ -7,7 +7,7 @@ public class Sattelite extends Entite {
 
     public Sattelite(Integer x, Integer y, Integer vitesse) {
         Position position2 = new Position(x, y);
-        Deplacement deplacement2 = new VersLaDroite(vitesse);
+        Deplacement deplacement2 = new VersLaDroite(vitesse, this);
         this.setPosition(position2);
         this.setDeplacement(deplacement2);
     }
