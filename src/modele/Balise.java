@@ -9,6 +9,10 @@ import observeur.SatteliteChange;
 import vue.BaliseWorld;
 import visiteur.VisitorEntite;
 
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Balise extends Entite implements Observeur {
 
     public Balise(Integer x, Integer y, Integer vitesse) {
@@ -21,7 +25,13 @@ public class Balise extends Entite implements Observeur {
     public void seDeplacer(){
         Position position = this.getDeplacement().nextPosition(this.getPosition());
         this.setPosition(position);
-        this.signal(new EntiteChange(this));
+        List<Object> objects = new ArrayList<>();
+        objects.add(new Point(this.getPosition().getX(), this.getPosition().getY()));
+        this.signal(new EntiteChange(this), objects);
+    }
+
+    public void sendData(Sattelite sattelite){
+        sattelite.receiveData(this);
     }
 
 

@@ -1,6 +1,9 @@
 package observeur;
 
+import java.awt.*;
 import java.lang.reflect.Method;
+import java.lang.reflect.Type;
+import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,44 +11,35 @@ import java.util.Map;
 
 public class Observable {
 
-    // private Map<Class<? extends Evenement>, Map<Method, List<Observeur>>> evenementMap;
+    // V1
+    //private Map<Class<? extends Evenement>, List<Observeur>> observeursMap;
 
-    private Map<Class<? extends Evenement>, List<Observeur>> observeursMap;
+    // V2
+    private Map<Class<? extends Evenement>, List<Enregistrement>> evenemens;
 
     public Observable() {
-        // this.evenementMap = new HashMap<>();
-        this.observeursMap = new HashMap<>();
+        this.evenemens = new HashMap<>();
     }
 
 
+    // V2
+    public void record(Class<? extends Evenement> evtClass, Observeur o, Method method) {
+        List<Enregistrement> enregistrements = this.evenemens.get(evtClass);
+
+        if (enregistrements == null) {
+            enregistrements = new ArrayList<>();
+
+            enregistrements.add(new Enregistrement(o, method));
+            this.evenemens.put(evtClass, enregistrements);
+            return;
+        }
+
+        enregistrements.add(new Enregistrement(o, method));
+    }
+
     /*
-    public void performRecord(Class<? extends Evenement> evtClass, Observeur o, Method method) {
-        Map<Method, List<Observeur>> methodMap = this.evenementMap.get(evtClass);
 
-        if (methodMap == null) {
-            methodMap = new HashMap<>();
-
-            List<Observeur> observeurList = new ArrayList<>();
-            observeurList.add(o);
-
-            methodMap.put(method, observeurList);
-            return;
-        }
-
-        List<Observeur> observeurList = methodMap.get(method);
-        if (observeurList == null) {
-
-            observeurList = new ArrayList<>();
-            observeurList.add(o);
-            return;
-        }
-
-        observeurList.add(o);
-
-
-    }*/
-
-
+    // V1
     public void record(Class<? extends Evenement> uneClass, Observeur o) {
         List<Observeur> observeursList = this.observeursMap.get(uneClass);
 
@@ -58,26 +52,29 @@ public class Observable {
 
         observeursList.add(o);
     }
+    */
 
-    /*
-    public void signalPerform(Evenement evt, Method method, List<Object> objects) {
-        Map<Method, List<Observeur>> methodMap = this.evenementMap.get(evt.getClass());
+    // V2
+    public void signal(Evenement evt, List<Object> objects) {
 
-        if (methodMap != null) {
+        List<Enregistrement> enregistrements = this.evenemens.get(evt.getClass());
 
-            List<Observeur> observeurList = methodMap.get(method);
-
-            for (Observeur observeur : observeurList) {
+        if (enregistrements != null) {
+            for (Enregistrement enregistrement : enregistrements) {
                 try {
-                    method.invoke(objects);
-                } catch ( Exception e) {
-                    System.out.println("exeption invoke");
+                    System.out.println("getObserveur : "+enregistrement.getObserveur());
+                    System.out.println("getMethod "+enregistrement.getMethod());
+
+                    enregistrement.getMethod().invoke(enregistrement.getObserveur(), new Point(10,10));
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         }
-    }*/
+    }
 
-
+    /*
+    // V1
     public void signal(Evenement evt) {
         List<Observeur> observeursList = this.observeursMap.get(evt.getClass());
 
@@ -88,5 +85,5 @@ public class Observable {
             }
         }
     }
-
+    */
 }

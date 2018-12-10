@@ -7,6 +7,8 @@ import modele.deplacement.VersLaDroite;
 import observeur.SatteliteChange;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BaliseWorld extends World {
 
@@ -44,13 +46,14 @@ public class BaliseWorld extends World {
         Balise balise = new Balise(BaliseWorld.width + 200, BaliseWorld.height, 10);
 
         // Satelite
-        Sattelite sattelite = new Sattelite(BaliseWorld.width - 200, BaliseWorld.height-100, 5);
-
-
+        Sattelite sattelite = new Sattelite(BaliseWorld.width - 200, BaliseWorld.height - 100, 5);
 
         // abonement de la balise pour le satelite
-        sattelite.record(SatteliteChange.class, balise);
-
+        try {
+            sattelite.record(SatteliteChange.class, balise, Sattelite.class.getMethod("receiveData", Sattelite.class));
+        } catch (Exception e) {
+            System.out.println("exeption getMethod");
+        }
         // les Vues
         BaliseVue baliseVue = new BaliseVue(balise);
         SatteliteVue satteliteVue = new SatteliteVue(sattelite);
@@ -71,7 +74,7 @@ public class BaliseWorld extends World {
 
 
     public void seDeplacer() {
-        for (Entite entite : this.modele.getEntites()){
+        for (Entite entite : this.modele.getEntites()) {
             entite.seDeplacer();
         }
     }
