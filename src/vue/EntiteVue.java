@@ -26,11 +26,4 @@ public class EntiteVue extends Morph implements Observeur {
             System.out.println("exeption getMethod");
         }
     }
-
-    @Override
-    public void receive(Evenement evt) {
-        Entite entite = (Entite) evt.source();
-        Point point = new Point(entite.getPosition().getX(), entite.getPosition().getY());
-        this.setPosition(point);
-    }
 }

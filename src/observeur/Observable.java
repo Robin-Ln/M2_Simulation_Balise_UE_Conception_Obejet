@@ -62,10 +62,7 @@ public class Observable {
         if (enregistrements != null) {
             for (Enregistrement enregistrement : enregistrements) {
                 try {
-                    System.out.println("getObserveur : "+enregistrement.getObserveur());
-                    System.out.println("getMethod "+enregistrement.getMethod());
-
-                    enregistrement.getMethod().invoke(enregistrement.getObserveur(), new Point(10,10));
+                    enregistrement.getMethod().invoke(enregistrement.getObserveur(), objects.toArray());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

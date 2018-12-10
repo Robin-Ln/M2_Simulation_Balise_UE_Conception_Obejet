@@ -30,16 +30,8 @@ public class Balise extends Entite implements Observeur {
         this.signal(new EntiteChange(this), objects);
     }
 
-    public void sendData(Sattelite sattelite){
-        sattelite.receiveData(this);
-    }
 
-
-    @Override
-    public void receive(Evenement evt) {
-        Sattelite sattelite = (Sattelite) evt.source();
-
-
+    public void sendData(Sattelite sattelite) {
         Integer baliseX = this.getPosition().getX();
         Integer satteliteX = sattelite.getPosition().getX();
 
