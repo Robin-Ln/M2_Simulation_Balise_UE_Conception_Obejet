@@ -1,15 +1,29 @@
 package observeur;
 
-public class Evenement {
+public abstract class Evenement {
 
-  Observable source;
+  // Attributs
+
+  private Observable source;
+
+  // Constructeur
 
   public Evenement(Observable source) {
     this.source = source;
   }
 
-  public Observable source() {
+  // Methodes
+
+ abstract public void traitement(Observeur observeur);
+
+  // Accesseur
+
+
+  public Observable getSource() {
     return source;
   }
 
+  public void setSource(Observable source) {
+    this.source = source;
+  }
 }

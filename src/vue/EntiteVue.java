@@ -21,7 +21,7 @@ public class EntiteVue extends Morph implements Observeur {
         );
 
         try {
-            entite.record(EntiteChange.class, this, EntiteVue.class.getMethod("setPosition", Point.class));
+            entite.record(EntiteChange.class, this);
         } catch (Exception e) {
             System.out.println("exeption getMethod");
         }

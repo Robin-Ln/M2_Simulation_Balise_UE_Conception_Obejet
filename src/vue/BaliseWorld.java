@@ -49,11 +49,9 @@ public class BaliseWorld extends World {
         Sattelite sattelite = new Sattelite(BaliseWorld.width - 200, BaliseWorld.height - 100, 5);
 
         // abonement de la balise pour le satelite
-        try {
-            sattelite.record(SatteliteChange.class, balise, Balise.class.getMethod("sendData", Sattelite.class));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        sattelite.record(SatteliteChange.class,balise);
+
         // les Vues
         BaliseVue baliseVue = new BaliseVue(balise);
         SatteliteVue satteliteVue = new SatteliteVue(sattelite);
