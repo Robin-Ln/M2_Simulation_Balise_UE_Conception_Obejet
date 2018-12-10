@@ -44,7 +44,6 @@ public class Observable {
     public void signal(Evenement evt) {
         List<Observeur> observeursList = this.observeursMap.get(evt.getClass());
 
-
         if (observeursList != null) {
             for (Observeur observeur : observeursList) {
                 observeur.receive(evt);
