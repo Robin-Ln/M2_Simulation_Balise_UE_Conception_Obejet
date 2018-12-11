@@ -7,7 +7,8 @@ import vue.BaliseWorld;
 
 public class Sattelite extends Entite {
 
-    public Sattelite(Integer x, Integer y) {
+    public Sattelite(Modele modele, Integer x, Integer y) {
+        super(modele);
         Position position = new Position(x, y);
         Deplacement deplacement = new VersLaDroite(BaliseWorld.vitesseSattelite, this);
         this.setPosition(position);

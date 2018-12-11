@@ -47,13 +47,13 @@ public class BaliseWorld extends World {
         // --------------
 
         // Les entité
-        Balise balise = new Balise(1950, BaliseWorld.height);
-        Balise balise2 = new Balise(1000, BaliseWorld.height);
-        Balise balise3 = new Balise( 500, BaliseWorld.height);
-        Balise balise4 = new Balise( 700, BaliseWorld.height);
+        Balise balise = new Balise(modele,1950, BaliseWorld.height);
+        Balise balise2 = new Balise(modele,1000, BaliseWorld.height);
+        Balise balise3 = new Balise(modele, 500, BaliseWorld.height);
+        Balise balise4 = new Balise(modele, 700, BaliseWorld.height);
 
-        Sattelite sattelite = new Sattelite(500, BaliseWorld.height - 100);
-        Sattelite sattelite2 = new Sattelite(0, BaliseWorld.height - 150);
+        Sattelite sattelite = new Sattelite(modele,500, BaliseWorld.height - 100);
+        Sattelite sattelite2 = new Sattelite(modele,0, BaliseWorld.height - 150);
 
 
         // les Vues
@@ -67,13 +67,13 @@ public class BaliseWorld extends World {
 
 
         // Ajout des entite dans le modele (ajouter les satelites avant les balises )
-        this.modele.ajouterSattelite(sattelite);
-        this.modele.ajouterSattelite(sattelite2);
+        this.modele.getSattelites().add(sattelite);
+        this.modele.getSattelites().add(sattelite2);
 
-        this.modele.ajouterBalise(balise);
-        this.modele.ajouterBalise(balise2);
-        this.modele.ajouterBalise(balise3);
-        this.modele.ajouterBalise(balise4);
+        this.modele.getBalisese().add(balise);
+        this.modele.getBalisese().add(balise2);
+        this.modele.getBalisese().add(balise3);
+        this.modele.getBalisese().add(balise4);
     }
 
 

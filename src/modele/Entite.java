@@ -13,10 +13,13 @@ public abstract class Entite extends Observable {
 
     private Deplacement deplacement;
 
+    private Modele modele;
+
     // Constructeurs
 
-    public Entite() {
+    public Entite(Modele modele) {
         super();
+        this.modele = modele;
     }
 
 
@@ -44,5 +47,13 @@ public abstract class Entite extends Observable {
 
     public void setDeplacement(Deplacement deplacement) {
         this.deplacement = deplacement;
+    }
+
+    public Modele getModele() {
+        return modele;
+    }
+
+    public void setModele(Modele modele) {
+        this.modele = modele;
     }
 }

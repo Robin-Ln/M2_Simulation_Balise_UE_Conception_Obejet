@@ -22,17 +22,6 @@ public class Modele {
 
     // Methodes
 
-    public void ajouterBalise(Balise balise) {
-        this.balisese.add(balise);
-        for (Sattelite sattelite : this.sattelites) {
-            sattelite.record(SatteliteChange.class, balise);
-        }
-    }
-
-    public void ajouterSattelite(Sattelite sattelite) {
-        this.sattelites.add(sattelite);
-    }
-
     public void seDeplacer() {
         for (Sattelite sattelite : this.sattelites) {
             sattelite.seDeplacer();
@@ -45,4 +34,19 @@ public class Modele {
     // Accesseurs
 
 
+    public List<Balise> getBalisese() {
+        return balisese;
+    }
+
+    public void setBalisese(List<Balise> balisese) {
+        this.balisese = balisese;
+    }
+
+    public List<Sattelite> getSattelites() {
+        return sattelites;
+    }
+
+    public void setSattelites(List<Sattelite> sattelites) {
+        this.sattelites = sattelites;
+    }
 }

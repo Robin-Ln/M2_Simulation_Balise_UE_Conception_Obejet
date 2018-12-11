@@ -2,17 +2,14 @@ package observeur;
 
 import observeur.evenement.Evenement;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Observable {
 
     private Map<Class<? extends Evenement>, List<Observeur>> evenemens;
 
     public Observable() {
-        this.evenemens = new HashMap<>();
+        this.evenemens = Collections.synchronizedMap(new HashMap<>());
     }
 
 
@@ -21,7 +18,7 @@ public class Observable {
         List<Observeur> observeurs = this.evenemens.get(evtClass);
 
         if (observeurs == null) {
-            observeurs = new ArrayList<>();
+            observeurs = Collections.synchronizedList(new ArrayList<>());
         }
 
         observeurs.add(o);
@@ -35,9 +32,28 @@ public class Observable {
         List<Observeur> observeurs = this.evenemens.get(evt.getClass());
 
         if (observeurs != null) {
-            for (Observeur observeur : observeurs) {
+            Observeur[] arr = new Observeur[observeurs.size()];
+            arr = observeurs.toArray(arr);
+            for (Observeur observeur : arr) {
                 evt.traitement(observeur);
             }
+        }
+    }
+
+    public void unRecord(Class<? extends Evenement<?, ?>> eventClass, Observeur o) {
+        List<Observeur> observeurs = evenemens.get(eventClass);
+
+        if (observeurs == null) {
+            return;
+        }
+
+        Iterator<Observeur> itor = observeurs.iterator();
+        while (itor.hasNext()) {
+            Observeur current = itor.next();
+            if (o == current) itor.remove();
+        }
+        if (observeurs.isEmpty()) {
+            evenemens.remove(eventClass);
         }
     }
 
