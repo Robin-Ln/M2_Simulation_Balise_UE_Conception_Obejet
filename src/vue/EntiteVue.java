@@ -14,7 +14,7 @@ public class EntiteVue extends Morph implements Observeur {
         super(
                 Color.WHITE,
                 new Point(entite.getPosition().getX(), entite.getPosition().getY()),
-                new Dimension(20, 20)
+                new Dimension(10, 30)
         );
 
         this.setWorld(world);

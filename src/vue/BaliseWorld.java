@@ -47,10 +47,10 @@ public class BaliseWorld extends World {
         // --------------
 
         // Les entité
-        Balise balise = new Balise(195, BaliseWorld.height);
-        Balise balise2 = new Balise(100, BaliseWorld.height);
-        Balise balise3 = new Balise( 50, BaliseWorld.height);
-        Balise balise4 = new Balise( 0, BaliseWorld.height);
+        Balise balise = new Balise(1950, BaliseWorld.height);
+        Balise balise2 = new Balise(1000, BaliseWorld.height);
+        Balise balise3 = new Balise( 500, BaliseWorld.height);
+        Balise balise4 = new Balise( 700, BaliseWorld.height);
 
         Sattelite sattelite = new Sattelite(500, BaliseWorld.height - 100);
         Sattelite sattelite2 = new Sattelite(0, BaliseWorld.height - 150);

@@ -12,6 +12,10 @@ public class BaliseVue extends EntiteVue {
     }
 
     public void draw(Graphics g) {
-        g.fillRect(bounds.x, bounds.y, bounds.width, bounds.height);
+        Color c = g.getColor();
+        g.setColor(Color.RED);
+        g.fillOval(bounds.x-(bounds.height/2),bounds.y-(bounds.width/2),bounds.height,bounds.width);
+        g.setColor(c);
+        super.draw(g);
     }
 }
