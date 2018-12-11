@@ -1,35 +1,28 @@
 package observeur.evenement;
 
+import modele.Balise;
 import modele.Entite;
+import modele.Sattelite;
 import observeur.Observable;
 import observeur.Observeur;
 import vue.EntiteVue;
 
 import java.awt.*;
 
-public class EntiteChange extends Evenement {
+public class EntiteChange extends Evenement<Entite, EntiteVue> {
 
   // Constructeur
 
-  public EntiteChange(Observable source) {
-    super(source);
+  public EntiteChange(Entite entite) {
+    super(entite);
   }
-
 
   // Methodes
 
+
   @Override
-  public void traitement(Observeur observeur) {
-    Entite entite = null;
-    EntiteVue entiteVue = null;
-    try {
-      entite = (Entite) this.getSource();
-      entiteVue = (EntiteVue) observeur;
-    }catch (Exception e){
-      e.printStackTrace();
-      return;
-    }
-    Point point = new Point(entite.getPosition().getX(), entite.getPosition().getY());
+  public void traitement(EntiteVue entiteVue) {
+    Point point = new Point(this.getSource().getPosition().getX(), this.getSource().getPosition().getY());
     entiteVue.setPosition(point);
   }
 }

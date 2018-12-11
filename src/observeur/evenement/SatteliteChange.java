@@ -6,29 +6,19 @@ import modele.deplacement.VersLeBas;
 import observeur.Observable;
 import observeur.Observeur;
 
-public class SatteliteChange extends Evenement {
+public class SatteliteChange extends Evenement<Sattelite,Balise> {
 
   // Constructeur
 
-  public SatteliteChange(Observable source) {
-    super(source);
+  public SatteliteChange(Sattelite sattelite) {
+    super(sattelite);
   }
-
 
   // Methodes
 
   @Override
-  public void traitement(Observeur observeur) {
-    Balise balise = null;
-    Sattelite sattelite = null;
-    try {
-      sattelite = (Sattelite) this.getSource();
-      balise = (Balise) observeur;
-    }catch (Exception e){
-      e.printStackTrace();
-      return;
-    }
-    balise.sendData(sattelite);
+  public void traitement(Balise balise) {
+    balise.sendData(this.getSource());
   }
 
 }

@@ -25,7 +25,6 @@ public abstract class Entite extends Observable {
     public void seDeplacer() {
         Position position = this.getDeplacement().nextPosition(this.getPosition());
         this.setPosition(position);
-        this.signal(new SatteliteChange(this));
         this.signal(new EntiteChange(this));
     }
 

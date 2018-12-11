@@ -2,6 +2,8 @@ package modele;
 
 import modele.deplacement.Deplacement;
 import modele.deplacement.VersLaDroite;
+import observeur.evenement.EntiteChange;
+import observeur.evenement.SatteliteChange;
 import vue.BaliseWorld;
 
 public class Sattelite extends Entite {
@@ -11,6 +13,11 @@ public class Sattelite extends Entite {
         Deplacement deplacement2 = new VersLaDroite(BaliseWorld.vitesseSattelite, this);
         this.setPosition(position2);
         this.setDeplacement(deplacement2);
+    }
+
+    public void seDeplacer() {
+        super.seDeplacer();
+        this.signal(new SatteliteChange(this));
     }
 
 
