@@ -1,5 +1,6 @@
 package modele;
 
+import observeur.evenement.SatteliteChange;
 import vue.BaliseWorld;
 
 import java.util.ArrayList;
@@ -9,24 +10,39 @@ public class Modele {
 
     // Attributs
 
-    private List<Entite> entites;
+    private List<Balise> balisese;
+    private List<Sattelite> sattelites;
 
     // Constructeur
 
     public Modele(BaliseWorld baliseWorld) {
-        this.entites = new ArrayList<>();
+        this.balisese = new ArrayList<>();
+        this.sattelites = new ArrayList<>();
+    }
+
+    // Methodes
+
+    public void ajouterBalise(Balise balise) {
+        this.balisese.add(balise);
+        for (Sattelite sattelite : this.sattelites) {
+            sattelite.record(SatteliteChange.class, balise);
+        }
+    }
+
+    public void ajouterSattelite(Sattelite sattelite) {
+        this.sattelites.add(sattelite);
+    }
+
+    public void seDeplacer() {
+        for (Sattelite sattelite : this.sattelites) {
+            sattelite.seDeplacer();
+        }
+        for (Balise balise : this.balisese) {
+            balise.seDeplacer();
+        }
     }
 
     // Accesseurs
-
-    public List<Entite> getEntites() {
-        return entites;
-    }
-
-    public void setEntites(List<Entite> entites) {
-        this.entites = entites;
-    }
-
 
 
 }

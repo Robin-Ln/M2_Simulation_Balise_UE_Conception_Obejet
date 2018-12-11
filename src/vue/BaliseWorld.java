@@ -47,55 +47,38 @@ public class BaliseWorld extends World {
         // --------------
 
         // Balise
-        Balise balise = new Balise(BaliseWorld.width + 195, BaliseWorld.height);
-        Balise balise2 = new Balise(BaliseWorld.width + 100, BaliseWorld.height);
-        Balise balise3 = new Balise(BaliseWorld.width + 50, BaliseWorld.height);
-        Balise balise4 = new Balise(BaliseWorld.width + 0, BaliseWorld.height);
+        Balise balise = new Balise(195, BaliseWorld.height);
+        Balise balise2 = new Balise(100, BaliseWorld.height);
+        Balise balise3 = new Balise( 50, BaliseWorld.height);
+        Balise balise4 = new Balise( 0, BaliseWorld.height);
 
         // Satelite
-        Sattelite sattelite = new Sattelite(BaliseWorld.width + 200, BaliseWorld.height - 100);
+        Sattelite sattelite = new Sattelite(500, BaliseWorld.height - 100);
+        Sattelite sattelite2 = new Sattelite(0, BaliseWorld.height - 150);
 
-        // abonement de la balise pour le satelite
-        sattelite.record(SatteliteChange.class, balise);
-        sattelite.record(SatteliteChange.class, balise2);
-        sattelite.record(SatteliteChange.class, balise3);
-        sattelite.record(SatteliteChange.class, balise4);
 
         // les Vues
-        BaliseVue baliseVue = new BaliseVue(balise);
-        BaliseVue baliseVue2 = new BaliseVue(balise2);
-        BaliseVue baliseVue3 = new BaliseVue(balise3);
-        BaliseVue baliseVue4 = new BaliseVue(balise4);
+        new BaliseVue(balise, this);
+        new BaliseVue(balise2, this);
+        new BaliseVue(balise3, this);
+        new BaliseVue(balise4, this);
 
-        SatteliteVue satteliteVue = new SatteliteVue(sattelite);
-
-
-        // Ajout pour le repaint
-        this.contents().add(baliseVue);
-        this.contents().add(baliseVue2);
-        this.contents().add(baliseVue3);
-        this.contents().add(baliseVue4);
-        this.contents().add(satteliteVue);
+        new SatteliteVue(sattelite, this);
+        new SatteliteVue(sattelite2, this);
 
 
-        baliseVue.setWorld(this);
-        baliseVue2.setWorld(this);
-        baliseVue3.setWorld(this);
-        baliseVue4.setWorld(this);
-        satteliteVue.setWorld(this);
+        // Ajout des entite dans le modele (ajouter les satelites avant les balises )
+        this.modele.ajouterSattelite(sattelite);
+        this.modele.ajouterSattelite(sattelite2);
 
-
-        this.modele.getEntites().add(balise);
-        this.modele.getEntites().add(balise2);
-        this.modele.getEntites().add(balise3);
-        this.modele.getEntites().add(balise4);
-        this.modele.getEntites().add(sattelite);
+        this.modele.ajouterBalise(balise);
+        this.modele.ajouterBalise(balise2);
+        this.modele.ajouterBalise(balise3);
+        this.modele.ajouterBalise(balise4);
     }
 
 
     public void seDeplacer() {
-        for (Entite entite : this.modele.getEntites()) {
-            entite.seDeplacer();
-        }
+        this.modele.seDeplacer();
     }
 }
