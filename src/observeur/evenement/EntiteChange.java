@@ -1,10 +1,6 @@
 package observeur.evenement;
 
-import modele.Balise;
 import modele.Entite;
-import modele.Sattelite;
-import observeur.Observable;
-import observeur.Observeur;
 import vue.EntiteVue;
 
 import java.awt.*;

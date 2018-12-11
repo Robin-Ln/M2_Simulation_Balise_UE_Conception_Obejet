@@ -5,21 +5,21 @@ import observeur.Observeur;
 
 public abstract class Evenement<Source extends Observable, Cible extends Observeur> {
 
-  // Attributs
+    // Attributs
 
-  private Source source;
+    private Source source;
 
-  // Constructeur
+    // Constructeur
 
-  public Evenement(Source source) {
-    this.source = source;
-  }
+    public Evenement(Source source) {
+        this.source = source;
+    }
 
-  // Methodes
+    // Methodes
 
- abstract public void traitement(Cible cible);
+    abstract public void traitement(Cible cible);
 
-  // Accesseur
+    // Accesseur
 
 
     public Source getSource() {

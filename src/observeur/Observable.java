@@ -22,13 +22,10 @@ public class Observable {
 
         if (observeurs == null) {
             observeurs = new ArrayList<>();
-
-            observeurs.add(o);
-            this.evenemens.put(evtClass, observeurs);
-            return;
         }
 
         observeurs.add(o);
+        this.evenemens.put(evtClass, observeurs);
     }
 
 
