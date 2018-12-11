@@ -19,7 +19,7 @@ public class BaliseWorld extends World {
 
     public static final Integer vitesseBalise = 1;
 
-    public static final Integer vitesseSattelite = 5;
+    public static final Integer vitesseSattelite = 2;
 
 
     private CielVue ciel;
@@ -46,13 +46,12 @@ public class BaliseWorld extends World {
 
         // --------------
 
-        // Balise
+        // Les entité
         Balise balise = new Balise(195, BaliseWorld.height);
         Balise balise2 = new Balise(100, BaliseWorld.height);
         Balise balise3 = new Balise( 50, BaliseWorld.height);
         Balise balise4 = new Balise( 0, BaliseWorld.height);
 
-        // Satelite
         Sattelite sattelite = new Sattelite(500, BaliseWorld.height - 100);
         Sattelite sattelite2 = new Sattelite(0, BaliseWorld.height - 150);
 

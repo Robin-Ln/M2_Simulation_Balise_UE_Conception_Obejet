@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd0e5591-3e1e-4aae-bc26-28045127db24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/Modele.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Modele.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/Sattelite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/Sattelite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/BaliseVue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/BaliseVue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/BaliseWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/BaliseWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/EntiteVue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/EntiteVue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/SatteliteVue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/SatteliteVue.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,12 +17,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/vue/BaliseWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+            <state relative-caret-position="122">
+              <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2323#2324#0" expanded="true" />
                 <element signature="e#2349#2350#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/modele/Sattelite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,8 +145,8 @@
         <option value="$PROJECT_DIR$/src/vue/BaliseVue.java" />
         <option value="$PROJECT_DIR$/src/vue/EntiteVue.java" />
         <option value="$PROJECT_DIR$/src/modele/Modele.java" />
-        <option value="$PROJECT_DIR$/src/modele/Sattelite.java" />
         <option value="$PROJECT_DIR$/src/vue/SatteliteVue.java" />
+        <option value="$PROJECT_DIR$/src/modele/Sattelite.java" />
         <option value="$PROJECT_DIR$/src/vue/BaliseWorld.java" />
       </list>
     </option>
@@ -196,7 +205,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544525300425" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544525454066" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -258,18 +267,18 @@
       <workItem from="1544445701846" duration="1507000" />
       <workItem from="1544469828141" duration="1655000" />
       <workItem from="1544486503460" duration="1703000" />
-      <workItem from="1544521722063" duration="3309000" />
+      <workItem from="1544521722063" duration="3460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27522000" />
+    <option name="totallyTimeSpent" value="27673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25686592" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25686592" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -278,7 +287,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2890411" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2890411" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3958904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -356,7 +365,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/vue/BaliseWorld.java</url>
-          <line>66</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
@@ -622,16 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modele/Sattelite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/modele/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -689,10 +688,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/modele/Sattelite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/BaliseWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+        <state relative-caret-position="122">
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2323#2324#0" expanded="true" />

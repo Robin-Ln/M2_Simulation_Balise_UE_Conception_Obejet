@@ -21,7 +21,7 @@ public class Sattelite extends Entite {
 
 
     public void receiveData(Balise balise) {
-        System.out.println("Data");
+        System.out.println(balise);
     }
 
 
