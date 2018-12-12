@@ -1,6 +1,6 @@
 package modele;
 
-import modele.strategie.DeplacementSateliteNormale;
+import modele.strategie.StrategieDeplacementSateliteNormale;
 import observeur.evenement.SatteliteChange;
 import vue.BaliseWorld;
 import vue.SatteliteVue;
@@ -14,7 +14,7 @@ public class Sattelite extends Entite {
         this.setPosition(position);
 
         // Deplacement
-        this.setStrategieDeplacement(new DeplacementSateliteNormale(this,BaliseWorld.vitesseSattelite));
+        this.setStrategieDeplacement(new StrategieDeplacementSateliteNormale(this,BaliseWorld.vitesseSattelite));
 
 
         // Creation de la vue

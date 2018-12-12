@@ -1,6 +1,6 @@
 package modele;
 
-import modele.strategie.DeplacementBaliseNormale;
+import modele.strategie.StrategieDeplacementBaliseNormale;
 import observeur.Observeur;
 import observeur.evenement.SatteliteChange;
 import vue.BaliseVue;
@@ -16,7 +16,7 @@ public class Balise extends Entite implements Observeur {
         this.setPosition(position);
 
         // Deplacement
-        this.setStrategieDeplacement(new DeplacementBaliseNormale(this,BaliseWorld.vitesseBalise));
+        this.setStrategieDeplacement(new StrategieDeplacementBaliseNormale(this,BaliseWorld.vitesseBalise));
 
         // Creation de la vue
         new BaliseVue(this, this.getModele().getBaliseWorld());

@@ -5,9 +5,9 @@ import modele.deplacement.VersLaDroite;
 import modele.deplacement.VersLeBas;
 import modele.deplacement.VersLeHaut;
 
-public class DeplacementBaliseNormale extends StrategieDeplacement {
+public class StrategieDeplacementBaliseNormale extends StrategieDeplacement {
 
-    public DeplacementBaliseNormale(Entite entite, Integer vitesse) {
+    public StrategieDeplacementBaliseNormale(Entite entite, Integer vitesse) {
         super(entite, vitesse);
 
         VersLaDroite versLaDroite = new VersLaDroite(this);

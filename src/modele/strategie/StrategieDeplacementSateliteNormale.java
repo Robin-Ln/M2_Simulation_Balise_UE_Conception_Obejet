@@ -3,9 +3,9 @@ package modele.strategie;
 import modele.Entite;
 import modele.deplacement.VersLaDroite;
 
-public class DeplacementSateliteNormale extends StrategieDeplacement {
+public class StrategieDeplacementSateliteNormale extends StrategieDeplacement {
 
-    public DeplacementSateliteNormale(Entite entite, Integer vitesse) {
+    public StrategieDeplacementSateliteNormale(Entite entite, Integer vitesse) {
         super(entite, vitesse);
 
         VersLaDroite versLaDroite = new VersLaDroite(this);
