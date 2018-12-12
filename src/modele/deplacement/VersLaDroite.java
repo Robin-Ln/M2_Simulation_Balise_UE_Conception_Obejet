@@ -1,18 +1,20 @@
 package modele.deplacement;
 
-import modele.Entite;
 import modele.Position;
+import modele.strategie.StrategieDeplacement;
 import vue.BaliseWorld;
 
 public class VersLaDroite extends Deplacement {
 
-    public VersLaDroite(Integer vitesse, Entite entite) {
-        super(vitesse, entite);
+    private StrategieDeplacement strategieDeplacement;
+
+    public VersLaDroite(StrategieDeplacement strategieDeplacement) {
+        this.strategieDeplacement = strategieDeplacement;
     }
 
     @Override
     public Position nextPosition(Position position) {
-        Integer nextX = (position.getX() + this.getVitesse()) % BaliseWorld.width;
+        Integer nextX = (position.getX() + this.strategieDeplacement.getVitesse()) % BaliseWorld.width;
         position.setX(nextX);
         return position;
     }

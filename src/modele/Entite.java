@@ -1,6 +1,6 @@
 package modele;
 
-import modele.deplacement.Deplacement;
+import modele.strategie.StrategieDeplacement;
 import observeur.Observable;
 import observeur.evenement.EntiteChange;
 
@@ -10,7 +10,7 @@ public abstract class Entite extends Observable {
 
     private Position position;
 
-    private Deplacement deplacement;
+    private StrategieDeplacement strategieDeplacement;
 
     private Modele modele;
 
@@ -25,8 +25,7 @@ public abstract class Entite extends Observable {
     // Methodes
 
     public void seDeplacer() {
-        Position position = this.getDeplacement().nextPosition(this.getPosition());
-        this.setPosition(position);
+        this.strategieDeplacement.seDeplacer();
         this.signal(new EntiteChange(this));
     }
 
@@ -40,19 +39,19 @@ public abstract class Entite extends Observable {
         this.position = position;
     }
 
-    public Deplacement getDeplacement() {
-        return deplacement;
-    }
-
-    public void setDeplacement(Deplacement deplacement) {
-        this.deplacement = deplacement;
-    }
-
     public Modele getModele() {
         return modele;
     }
 
     public void setModele(Modele modele) {
         this.modele = modele;
+    }
+
+    public StrategieDeplacement getStrategieDeplacement() {
+        return strategieDeplacement;
+    }
+
+    public void setStrategieDeplacement(StrategieDeplacement strategieDeplacement) {
+        this.strategieDeplacement = strategieDeplacement;
     }
 }

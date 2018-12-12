@@ -1,8 +1,6 @@
 package modele;
 
-import modele.deplacement.Deplacement;
-import modele.deplacement.VersLeBas;
-import modele.deplacement.VersLeHaut;
+import modele.strategie.DeplacementBaliseNormale;
 import observeur.Observeur;
 import observeur.evenement.SatteliteChange;
 import vue.BaliseVue;
@@ -18,8 +16,7 @@ public class Balise extends Entite implements Observeur {
         this.setPosition(position);
 
         // Deplacement
-        Deplacement deplacement = new VersLeHaut(BaliseWorld.vitesseBalise, this);
-        this.setDeplacement(deplacement);
+        this.setStrategieDeplacement(new DeplacementBaliseNormale(this,BaliseWorld.vitesseBalise));
 
         // Creation de la vue
         new BaliseVue(this, this.getModele().getBaliseWorld());
@@ -54,7 +51,7 @@ public class Balise extends Entite implements Observeur {
             sattelite.receiveData(this);
 
             // Changement de deplacement
-            this.setDeplacement(new VersLeBas(BaliseWorld.vitesseBalise, this));
+            this.getStrategieDeplacement().nextDeplacement();
 
             // desinscription
             for (Sattelite sattelite2 : this.getModele().getSattelites()){
