@@ -16,6 +16,7 @@ class AnnouncerTest {
 
     @Test
     public void test() {
+        // Creation des classe
         TestObserveur observeur = new TestObserveur();
         TestObservable observable = new TestObservable();
 

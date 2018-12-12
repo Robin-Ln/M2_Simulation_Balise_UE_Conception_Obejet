@@ -1,6 +1,5 @@
 package modele;
 
-import observeur.evenement.SatteliteChange;
 import vue.BaliseWorld;
 
 import java.util.ArrayList;
@@ -12,12 +11,14 @@ public class Modele {
 
     private List<Balise> balisese;
     private List<Sattelite> sattelites;
+    private BaliseWorld baliseWorld;
 
     // Constructeur
 
     public Modele(BaliseWorld baliseWorld) {
         this.balisese = new ArrayList<>();
         this.sattelites = new ArrayList<>();
+        this.baliseWorld = baliseWorld;
     }
 
     // Methodes
@@ -48,5 +49,13 @@ public class Modele {
 
     public void setSattelites(List<Sattelite> sattelites) {
         this.sattelites = sattelites;
+    }
+
+    public BaliseWorld getBaliseWorld() {
+        return baliseWorld;
+    }
+
+    public void setBaliseWorld(BaliseWorld baliseWorld) {
+        this.baliseWorld = baliseWorld;
     }
 }

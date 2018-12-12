@@ -15,7 +15,7 @@ public class BaliseVue extends EntiteVue {
         Color c = null;
 
         if(this.getPosition().y == BaliseWorld.height){
-            c = Color.DARK_GRAY;
+            c = this.color;
         } else {
             c = Color.RED;
         }

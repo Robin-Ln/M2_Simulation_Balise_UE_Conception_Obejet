@@ -5,27 +5,37 @@ import modele.deplacement.VersLeBas;
 import modele.deplacement.VersLeHaut;
 import observeur.Observeur;
 import observeur.evenement.SatteliteChange;
+import vue.BaliseVue;
 import vue.BaliseWorld;
 
 public class Balise extends Entite implements Observeur {
 
     public Balise(Modele modele, Integer x, Integer y) {
         super(modele);
+
+        // Position
         Position position = new Position(x, y);
-        Deplacement deplacement = new VersLeHaut(BaliseWorld.vitesseBalise, this);
         this.setPosition(position);
+
+        // Deplacement
+        Deplacement deplacement = new VersLeHaut(BaliseWorld.vitesseBalise, this);
         this.setDeplacement(deplacement);
+
+        // Creation de la vue
+        new BaliseVue(this, this.getModele().getBaliseWorld());
     }
 
     @Override
     public void seDeplacer() {
+
+        // Deplacement avec la strategie
         super.seDeplacer();
 
+        // Balise a la surface ?
         Integer baliseY = this.getPosition().getY();
-
-        // Balise a la surface
         if (baliseY.equals(BaliseWorld.height)) {
 
+            // abonement a tous les satelites
             for (Sattelite sattelite : this.getModele().getSattelites()){
                 sattelite.record(SatteliteChange.class,this);
             }

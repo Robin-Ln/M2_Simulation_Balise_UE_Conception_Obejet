@@ -56,16 +56,6 @@ public class BaliseWorld extends World {
         Sattelite sattelite2 = new Sattelite(modele,0, BaliseWorld.height - 150);
 
 
-        // les Vues
-        new BaliseVue(balise, this);
-        new BaliseVue(balise2, this);
-        new BaliseVue(balise3, this);
-        new BaliseVue(balise4, this);
-
-        new SatteliteVue(sattelite, this);
-        new SatteliteVue(sattelite2, this);
-
-
         // Ajout des entite dans le modele (ajouter les satelites avant les balises )
         this.modele.getSattelites().add(sattelite);
         this.modele.getSattelites().add(sattelite2);
