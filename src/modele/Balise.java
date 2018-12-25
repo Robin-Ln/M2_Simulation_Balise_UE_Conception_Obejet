@@ -52,6 +52,7 @@ public class Balise extends Entite implements Observeur {
 
             // Changement de deplacement
             this.getStrategieDeplacement().nextDeplacement();
+            this.seDeplacer();
 
             // desinscription
             for (Sattelite sattelite2 : this.getModele().getSattelites()){
