@@ -1,10 +1,10 @@
 package modele;
 
 import modele.strategie.StrategieDeplacement;
-import observeur.Observable;
+import observeur.Annonceur;
 import observeur.evenement.EntiteChange;
 
-public abstract class Entite extends Observable {
+public abstract class Entite extends Annonceur {
 
     // Attributs
 

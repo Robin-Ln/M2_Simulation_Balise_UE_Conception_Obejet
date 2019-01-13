@@ -1,9 +1,9 @@
 package modele.strategie;
 
 import modele.Entite;
-import modele.deplacement.VersLaDroite;
-import modele.deplacement.VersLeBas;
-import modele.deplacement.VersLeHaut;
+import modele.strategie.deplacement.VersLaDroite;
+import modele.strategie.deplacement.VersLeBas;
+import modele.strategie.deplacement.VersLeHaut;
 
 public class StrategieDeplacementBaliseNormale extends StrategieDeplacement {
 

@@ -1,6 +1,6 @@
 package test;
 
-import observeur.Observable;
+import observeur.Annonceur;
 import observeur.Observeur;
 import observeur.evenement.Evenement;
 import org.junit.jupiter.api.Test;
@@ -36,7 +36,7 @@ class AnnouncerTest {
 
 class TestObserveur implements Observeur {}
 
-class TestObservable extends Observable {}
+class TestObservable extends Annonceur {}
 
 
 class TestEvent extends Evenement<TestObservable, TestObserveur> {

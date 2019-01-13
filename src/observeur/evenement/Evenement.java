@@ -1,9 +1,9 @@
 package observeur.evenement;
 
-import observeur.Observable;
+import observeur.Annonceur;
 import observeur.Observeur;
 
-public abstract class Evenement<Source extends Observable, Cible extends Observeur> {
+public abstract class Evenement<Source extends Annonceur, Cible extends Observeur> {
 
     // Attributs
 

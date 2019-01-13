@@ -2,7 +2,7 @@ package modele.strategie;
 
 import modele.Entite;
 import modele.Position;
-import modele.deplacement.Deplacement;
+import modele.strategie.deplacement.Deplacement;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,7 +1,7 @@
 package modele.strategie;
 
 import modele.Entite;
-import modele.deplacement.VersLaDroite;
+import modele.strategie.deplacement.VersLaDroite;
 
 public class StrategieDeplacementSateliteNormale extends StrategieDeplacement {
 
