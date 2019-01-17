@@ -92,7 +92,8 @@ public class BaliseWorld extends World {
 
     private void clearSimulation(){
         clear();
-
+        this.modele.getSattelites().clear();
+        this.modele.getBalisese().clear();
         this.creerTerrain();
     }
 
