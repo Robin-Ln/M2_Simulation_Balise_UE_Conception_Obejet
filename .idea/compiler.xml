@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="M2_Simulation_Balise_UE_Conception_Obejet" target="1.5" />
+      <module name="M2_Simulation_Balise_UE_Conception_Obejet" target="12" />
       <module name="M2_Simulation_Balise_UE_Conception_Objet" target="1.5" />
     </bytecodeTargetLevel>
   </component>
