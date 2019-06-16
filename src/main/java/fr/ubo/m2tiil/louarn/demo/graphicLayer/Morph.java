@@ -10,7 +10,7 @@ public abstract class Morph {
 	protected World world;
 	protected Rectangle bounds;
 	protected Color color;
-	protected List<Morph> submorphs = new ArrayList<Morph>();
+	protected List<Morph> submorphs = new ArrayList<>();
 
 	public Morph(Color color, Point pos, Dimension dim) {
 		this.color = color;

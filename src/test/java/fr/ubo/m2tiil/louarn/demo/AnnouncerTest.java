@@ -33,9 +33,11 @@ class AnnouncerTest {
     }
 }
 
-class TestObserveur implements Observeur {}
+class TestObserveur implements Observeur {
+}
 
-class TestObservable extends Annonceur {}
+class TestObservable extends Annonceur {
+}
 
 
 class TestEvent extends Evenement<TestObservable, TestObserveur> {
@@ -45,7 +47,7 @@ class TestEvent extends Evenement<TestObservable, TestObserveur> {
 
     public TestEvent(TestObservable testObservable) {
         super(testObservable);
-        this.log = new ArrayList<String>();
+        this.log = new ArrayList<>();
     }
 
     @Override

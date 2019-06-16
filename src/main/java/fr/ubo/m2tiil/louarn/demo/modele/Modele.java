@@ -16,8 +16,8 @@ public class Modele {
     // Constructeur
 
     public Modele(BaliseWorld baliseWorld) {
-        this.balisese = new ArrayList<Balise>();
-        this.sattelites = new ArrayList<Sattelite>();
+        this.balisese = new ArrayList<>();
+        this.sattelites = new ArrayList<>();
         this.baliseWorld = baliseWorld;
     }
 

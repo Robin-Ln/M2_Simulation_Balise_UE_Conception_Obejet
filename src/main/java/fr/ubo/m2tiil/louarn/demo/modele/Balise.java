@@ -1,10 +1,10 @@
 package fr.ubo.m2tiil.louarn.demo.modele;
 
-import fr.ubo.m2tiil.louarn.demo.observeur.evenement.SatteliteChange;
-import fr.ubo.m2tiil.louarn.demo.vue.BaliseWorld;
 import fr.ubo.m2tiil.louarn.demo.modele.strategie.StrategieDeplacementBaliseNormale;
 import fr.ubo.m2tiil.louarn.demo.observeur.Observeur;
+import fr.ubo.m2tiil.louarn.demo.observeur.evenement.SatteliteChange;
 import fr.ubo.m2tiil.louarn.demo.vue.BaliseVue;
+import fr.ubo.m2tiil.louarn.demo.vue.BaliseWorld;
 
 public class Balise extends Entite implements Observeur {
 
@@ -33,8 +33,8 @@ public class Balise extends Entite implements Observeur {
         if (baliseY.equals(BaliseWorld.height)) {
 
             // abonement a tous les satelites
-            for (Sattelite sattelite : this.getModele().getSattelites()){
-                sattelite.record(SatteliteChange.class,this);
+            for (Sattelite sattelite : this.getModele().getSattelites()) {
+                sattelite.record(SatteliteChange.class, this);
             }
         }
 
@@ -55,7 +55,7 @@ public class Balise extends Entite implements Observeur {
             this.seDeplacer();
 
             // desinscription
-            for (Sattelite sattelite2 : this.getModele().getSattelites()){
+            for (Sattelite sattelite2 : this.getModele().getSattelites()) {
                 sattelite2.unRecord(SatteliteChange.class, this);
             }
         }

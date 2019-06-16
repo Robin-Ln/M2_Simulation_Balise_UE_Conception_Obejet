@@ -9,7 +9,7 @@ public class Annonceur {
     private Map<Class<? extends Evenement>, List<Observeur>> evenemens;
 
     public Annonceur() {
-        this.evenemens = Collections.synchronizedMap(new HashMap<Class<? extends Evenement>, List<Observeur>>());
+        this.evenemens = Collections.synchronizedMap(new HashMap<>());
     }
 
 
@@ -18,7 +18,7 @@ public class Annonceur {
         List<Observeur> observeurs = this.evenemens.get(evtClass);
 
         if (observeurs == null) {
-            observeurs = Collections.synchronizedList(new ArrayList<Observeur>());
+            observeurs = Collections.synchronizedList(new ArrayList<>());
         }
 
         observeurs.add(o);

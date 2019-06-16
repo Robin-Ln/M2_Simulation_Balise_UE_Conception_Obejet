@@ -1,24 +1,24 @@
 package fr.ubo.m2tiil.louarn.demo.observeur.evenement;
 
-import fr.ubo.m2tiil.louarn.demo.vue.EntiteVue;
 import fr.ubo.m2tiil.louarn.demo.modele.Entite;
+import fr.ubo.m2tiil.louarn.demo.vue.EntiteVue;
 
 import java.awt.*;
 
 public class EntiteChange extends Evenement<Entite, EntiteVue> {
 
-  // Constructeur
+    // Constructeur
 
-  public EntiteChange(Entite entite) {
-    super(entite);
-  }
+    public EntiteChange(Entite entite) {
+        super(entite);
+    }
 
-  // Methodes
+    // Methodes
 
 
-  @Override
-  public void traitement(EntiteVue entiteVue) {
-    Point point = new Point(this.getSource().getPosition().getX(), this.getSource().getPosition().getY());
-    entiteVue.setPosition(point);
-  }
+    @Override
+    public void traitement(EntiteVue entiteVue) {
+        Point point = new Point(this.getSource().getPosition().getX(), this.getSource().getPosition().getY());
+        entiteVue.setPosition(point);
+    }
 }

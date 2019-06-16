@@ -3,8 +3,8 @@ package fr.ubo.m2tiil.louarn.demo.vue;
 import fr.ubo.m2tiil.louarn.demo.graphicLayer.Morph;
 import fr.ubo.m2tiil.louarn.demo.graphicLayer.World;
 import fr.ubo.m2tiil.louarn.demo.modele.Entite;
-import fr.ubo.m2tiil.louarn.demo.observeur.evenement.EntiteChange;
 import fr.ubo.m2tiil.louarn.demo.observeur.Observeur;
+import fr.ubo.m2tiil.louarn.demo.observeur.evenement.EntiteChange;
 
 import java.awt.*;
 

@@ -1,8 +1,8 @@
 package fr.ubo.m2tiil.louarn.demo.modele.strategie.deplacement;
 
-import fr.ubo.m2tiil.louarn.demo.vue.BaliseWorld;
 import fr.ubo.m2tiil.louarn.demo.modele.Position;
 import fr.ubo.m2tiil.louarn.demo.modele.strategie.StrategieDeplacement;
+import fr.ubo.m2tiil.louarn.demo.vue.BaliseWorld;
 
 public class VersLaDroite extends Deplacement {
 

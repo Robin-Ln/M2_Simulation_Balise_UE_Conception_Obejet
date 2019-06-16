@@ -46,7 +46,7 @@ public class BaliseWorld extends World {
         this.setKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                switch (e.getKeyChar()){
+                switch (e.getKeyChar()) {
                     case 'b':
                         ajouterBalise();
                         break;
@@ -72,7 +72,7 @@ public class BaliseWorld extends World {
         });
     }
 
-    private void creerTerrain(){
+    private void creerTerrain() {
         this.ciel = new CielVue(new Point(0, 0), new Dimension(BaliseWorld.width, BaliseWorld.height));
         this.contents().add(this.ciel);
 
@@ -80,17 +80,17 @@ public class BaliseWorld extends World {
         this.contents().add(this.merVue);
     }
 
-    private void ajouterSatelite(){
-        Sattelite sattelite = new Sattelite(modele,500, BaliseWorld.height - 100);
+    private void ajouterSatelite() {
+        Sattelite sattelite = new Sattelite(modele, 500, BaliseWorld.height - 100);
         this.modele.getSattelites().add(sattelite);
     }
 
-    private void ajouterBalise(){
-        Balise balise = new Balise(modele,1950, BaliseWorld.height);
+    private void ajouterBalise() {
+        Balise balise = new Balise(modele, 1950, BaliseWorld.height);
         this.modele.getBalisese().add(balise);
     }
 
-    private void clearSimulation(){
+    private void clearSimulation() {
         clear();
         this.modele.getSattelites().clear();
         this.modele.getBalisese().clear();

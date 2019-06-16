@@ -1,9 +1,9 @@
 package fr.ubo.m2tiil.louarn.demo.modele.strategie;
 
+import fr.ubo.m2tiil.louarn.demo.modele.Entite;
 import fr.ubo.m2tiil.louarn.demo.modele.strategie.deplacement.VersLaDroite;
 import fr.ubo.m2tiil.louarn.demo.modele.strategie.deplacement.VersLeBas;
 import fr.ubo.m2tiil.louarn.demo.modele.strategie.deplacement.VersLeHaut;
-import fr.ubo.m2tiil.louarn.demo.modele.Entite;
 
 public class StrategieDeplacementBaliseNormale extends StrategieDeplacement {
 
